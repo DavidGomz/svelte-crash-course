@@ -6,6 +6,7 @@ export async function load({ fetch, params }) {
     console.log(params)
     const id = params.id;
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    // const response = await fetch(`http://localhost:5173/api/guides/${id}`);
     const guide = await response.json();
     
     if(response.ok) {
